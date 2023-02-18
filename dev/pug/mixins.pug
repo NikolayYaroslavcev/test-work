@@ -1,0 +1,13 @@
+//mixin navigation(...li)
+//    nav.menu__body
+//        ul.menu__list
+//            each liItem in li
+//            li.menu__item
+//                a.menu__link(href='#')=liItem
+
+mixin icon(name,mod)
+    - mod = mod || ''
+    svg(class="icon icon-" + name + ' ' + mod)
+        use(xlink:href="./img/svg/symbol/sprite.svg#" + name)
+
+

@@ -1,0 +1,7 @@
+<svg id="x-mark"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="25.5px" height="25.5px">
+<path fill-rule="evenodd"  stroke="currentColor" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+ d="M23.079,24.490 L12.500,13.911 L1.921,24.490 L0.510,23.079 L11.089,12.500 L0.510,1.921 L1.921,0.510 L12.500,11.089 L23.079,0.510 L24.490,1.921 L13.911,12.500 L24.490,23.079 L23.079,24.490 Z"/>
+</svg>
