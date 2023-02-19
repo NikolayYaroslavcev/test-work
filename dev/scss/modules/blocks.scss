@@ -9,13 +9,11 @@
   grid-template-columns: repeat(2, 1fr);
   align-content: start;
   gap: 32px;
-  .container {
 
-  }
 
   .block {
     width: 100%;
-    height: 20vw;
+    height: 100%;
     display: flex;
     background: #000;
     overflow: hidden;
