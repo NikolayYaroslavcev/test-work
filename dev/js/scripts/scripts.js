@@ -113,9 +113,9 @@ document.addEventListener("change", (e) => {
 });
 
 const setGlobalCssVar = () => {
-  setCssVariable("--viewport-width", `${window.innerWidth}px`);
-  setCssVariable("--viewport-height", `${window.innerHeight}px`);
-  setCssVariable("--header-height", getNodeCssValue(document.querySelector(".header"), "height"));
+ // setCssVariable("--viewport-width", `${window.innerWidth}px`);
+ // setCssVariable("--viewport-height", `${window.innerHeight}px`);
+ // setCssVariable("--header-height", getNodeCssValue(document.querySelector(".header"), "height"));
 };
 
 
