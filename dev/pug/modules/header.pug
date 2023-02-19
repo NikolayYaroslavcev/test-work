@@ -1,35 +1,55 @@
-// -
-//     let navDate = ['Университет','Образование','Наука','International','Контакты','Курсы'];
-//svg
-               //    use(href=`./img/svg/arrow.svg#arrow`)
+-
+    const navBar = [
+        {
+            title: 'Университет',
+            path: 'university'
+        },
+        {
+            title: 'Образование',
+            path: 'education'
+        },
+        {
+            title: 'Наука',
+            path: 'science'
+        },
+        {
+            title: 'International',
+            path: 'international'
+        },
+        {
+            title: 'Контакты',
+            path: 'contacts'
+        },
+        {
+            title: 'Курсы',
+            path: 'cources'
+        }
+    ];
+
 header.header
     .container
-        .header-bloc
-            .logo
-                .logo-imag
-                    img(src="../../img/header/logo.png")
-                .logo-text Минский государственный лингвистический университет
-                    //+navigation('Университет','Образование','Наука','International','Контакты','Курсы')
-            .navigation
-                nav.menu__body
-                    ul.menu__list
-                        li.menu__item: a.menu__link(href='#') Университет
-                            li.menu__item: a.menu__link(href='#') Образование
-                                li.menu__item: a.menu__link(href='#') Наука
-                                    li.menu__item: a.menu__link(href='#') International
-                                        li.menu__item: a.menu__link(href='#') Контакты
-                                            li.menu__item: a.menu__link(href='#') Курсы
+        .header-block
             .system
                 .system-header
                     a(href='#') Система обращений
                     a(href='#') Рупозиторий МГЛУ
-                    a(href='#') RU
-                        a(href='#')
+                    p RU
+                        p
                             svg.icon
                                 use(href=`./img/header/svg/arrow.svg#arrow`)
-                        a(href='#')
+                        p
                             svg.icon
                                 use(href=`./img/header/svg/eye.svg#eye`)
+            .navigation
+                .logo
+                    .logo-imag
+                        img(src="../../img/header/logo.png")
+                    .logo-text Минский государственный лингвистический университет
+                nav.menu__body
+                    ul.menu__list
+                      each item in navBar
+                          li.menu__item
+                              a.menu__link(href=`./${item.path}`) #{item.title}
                 .system-footer
                     .input-box
                         input(type='text', placeholder='Search...')
@@ -38,7 +58,7 @@ header.header
                             a(href='#')
                                 svg.icon
                                     use(href=`./img/header/svg/search.svg#search`)
-                        i.uil.uil-times.close-icon X
+                        i.uil.uil-times.close-icon
                     a(href='#')
                         svg.icon
                             use(href=`./img/header/svg/mobile.svg#mobile`)
@@ -48,6 +68,3 @@ header.header
                     a(href='#')
                         svg.icon
                             use(href=`./img/header/svg/burger.svg#burger`)
-
-
-

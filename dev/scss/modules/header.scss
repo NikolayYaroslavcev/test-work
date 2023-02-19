@@ -9,15 +9,16 @@
 
 
   .container {
-    .header-bloc {
+    .header-block {
       display: flex;
-      justify-content: space-between;
-      column-gap: 16px;
+      flex-direction: column;
+      row-gap: 16px;
       align-items: flex-end;
 
       .logo {
         display: flex;
         column-gap: 16px;
+        align-items: flex-end;
 
         .logo-imag {
           min-width: 50px;
@@ -33,6 +34,10 @@
       }
 
       .navigation {
+        display: flex;
+        align-items: flex-end;
+        gap: 10px;
+
         .menu__body {
           .menu__list {
             display: flex;
@@ -59,31 +64,6 @@
                 }
               }
             }
-          }
-        }
-
-      }
-
-
-      .system {
-        display: flex;
-        flex-direction: column;
-        gap: 28px;
-
-        .system-header {
-          display: flex;
-          column-gap: 16px;
-
-          .icon {
-            width: 24px;
-            height: 24px;
-          }
-
-          a {
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 16px;
-            color: #000000;
           }
         }
 
@@ -177,8 +157,54 @@
           .search .search-icon {
             font-size: 30px;
             color: #1c1c1c;
+            svg {
+              width: 32px;
+              height: 32px;
+            }
           }
         }
+
+      }
+
+
+      .system {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+
+        .system-header {
+          display: flex;
+          column-gap: 16px;
+
+          .icon {
+            width: 24px;
+            height: 24px;
+          }
+
+          a {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            color: #000000;
+            position: relative;
+            &:after {
+              display: block;
+              position: absolute;
+              left: 0;
+              width: 0;
+              height: 2px;
+              background-color: #14609B;
+              content: "";
+              transition: width 0.3s ease-out;
+            }
+            &:hover:after,
+            &:focus:after {
+              width: 100%;
+            }
+
+          }
+        }
+
       }
     }
   }

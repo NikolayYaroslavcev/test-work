@@ -166,6 +166,17 @@ const swiperScroll = new Swiper(".mySwiper-scroll", {
   scrollbar: {
     el: ".swiper-scrollbar",
     hide: true
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1
+    },
+    785: {
+      slidesPerView: 2
+    },
+    1166: {
+      slidesPerView: 3
+    }
   }
 });
 
@@ -178,9 +189,23 @@ const swiperProjects = new Swiper(".projects-slider", {
 
 const partnersSlider = new Swiper(".partners-slider", {
   slidesPerView: 8,
+  // slidesPerView: document.body.clientWidth <= 1024 ? 3 : 8,
   spaceBetween: 10,
   freeMode: true,
   autoplay: true,
-  autoplaySpeed: 1000
+  autoplaySpeed: 1000,
+  breakpoints: {
+    320: {
+      slidesPerView: 2.5
+    },
+    785: {
+      slidesPerView: 4.5
+    },
+    1600: {
+      slidesPerView: 8.5
+    }
+
+  }
+
 });
 

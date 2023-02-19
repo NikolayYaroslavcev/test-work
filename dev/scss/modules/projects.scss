@@ -38,7 +38,7 @@
       .projects-slider {
         background-color: #0b0b0b;
         width: 100%;
-        height: 350px;
+        height:100%;
 
         .slider-projects {
           .slider-content {
@@ -59,10 +59,11 @@
               }
 
               .project-about {
+                flex: 0 0 45%;
+                align-self: center;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                flex: 1 1 50%;
                 gap: 16px;
                 align-items: flex-start;
 
@@ -75,6 +76,9 @@
 
                 .about-text {
                   text-align: initial;
+                  @media (max-width: 1189px) {
+                    font-size: 14px;
+                  }
 
                 }
 
@@ -86,6 +90,9 @@
                     color: #282828;
                     border: 1px solid #9A9A9A;
                     border-radius: 181px;
+                    @media (max-width: 1189px) {
+                      padding: 10px 40px;
+                    }
                     &:hover {
                       color: #FFFFFF;
                       background-color: #14609B;
