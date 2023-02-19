@@ -1,4 +1,96 @@
 .footer {
   margin-top: auto;
   border-top: 1px solid $black;
+
+  .container {
+    .footer-icons-block {
+      padding-top: 173px;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+
+      .icons-block-link {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+
+      }
+
+      .icons-block-text {
+
+      }
+    }
+
+    .footer-information {
+      padding-top: 50px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 60px;
+
+      .footer-information-content {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .information-title {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 19px;
+          color: #000000;
+        }
+
+        .information-body {
+          .information-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .information-item {
+              .information-link {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 130%;
+                color: #494949;
+              }
+            }
+          }
+        }
+
+        .information-info {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 19px;
+          color: #000000;
+        }
+      }
+    }
+
+    .footer-about {
+      padding-top: 35px;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: end;
+      .about-block {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: #9C9C9C;
+        .about-name{
+
+        }
+
+      }
+
+      .about-icons {
+        display: flex;
+        gap: 10px;
+
+        .about-icons-block {
+
+        }
+      }
+    }
+  }
 }
