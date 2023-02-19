@@ -18,6 +18,8 @@
     background: #000;
     overflow: hidden;
     cursor: pointer;
+    position: relative;
+
 
     img {
       opacity: 0.6;
@@ -27,6 +29,15 @@
         opacity: 1;
         transform: scale(1.1);
       }
+    }
+    .block-text {
+      position: absolute;
+      top: 4%;
+      left: 4%;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 38px;
+      color: #FFFFFF;
     }
   }
 
