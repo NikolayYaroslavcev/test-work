@@ -49,12 +49,12 @@
             .swiper-content {
               display: flex;
               column-gap: 64px;
-              flex: 1 1 50%;
 
               .project-imag {
                 img {
                   width: 100%;
                   height: 100%;
+                  //object-fit: cover;
                 }
               }
 

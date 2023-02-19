@@ -4,7 +4,7 @@
 
   .container {
     .footer-icons-block {
-      padding-top: 173px;
+      padding-top: 13%;
       display: flex;
       justify-content: space-between;
       gap: 10px;
@@ -19,6 +19,10 @@
       .icons-block-text {
 
       }
+      //@media (max-width: 1424px) {
+      //  .footer-icons-block {
+      //    padding-top: 35px;
+      //  }
     }
 
     .footer-information {

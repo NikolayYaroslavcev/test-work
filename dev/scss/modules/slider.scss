@@ -24,8 +24,6 @@
     }
 
     .slider-block {
-
-
       padding-left: 10%;
       display: flex;
       flex-direction: column;
@@ -48,13 +46,19 @@
 
       .btn {
         cursor: pointer;
+        transition: all .3s ease-in;
 
-        .button {
+        a {
           align-items: center;
           padding: 22px 60px;
-          background: #14609B;
-          box-shadow: 0px 4px 38px rgba(255, 255, 255, 0.25);
+          background: #296188;
+          box-shadow: 0 4px 38px rgba(255, 255, 255, 0.25);
           border-radius: 181px;
+
+          &:hover {
+            background: #07466b;
+            color: white;
+          }
         }
       }
     }

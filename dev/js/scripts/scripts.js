@@ -113,9 +113,9 @@ document.addEventListener("change", (e) => {
 });
 
 const setGlobalCssVar = () => {
- // setCssVariable("--viewport-width", `${window.innerWidth}px`);
- // setCssVariable("--viewport-height", `${window.innerHeight}px`);
- // setCssVariable("--header-height", getNodeCssValue(document.querySelector(".header"), "height"));
+  // setCssVariable("--viewport-width", `${window.innerWidth}px`);
+  // setCssVariable("--viewport-height", `${window.innerHeight}px`);
+  // setCssVariable("--header-height", getNodeCssValue(document.querySelector(".header"), "height"));
 };
 
 
@@ -138,7 +138,6 @@ closeIcon.addEventListener("click", () => {
 
 // slider
 
-
 const swiper = new Swiper(".mySwiper", {
   spaceBetween: 30,
   pagination: {
@@ -152,6 +151,7 @@ const swiper = new Swiper(".mySwiper", {
 
 const swiperTwo = new Swiper(".mySwiper-two", {
   spaceBetween: 30,
+  slidesPerView: document.body.clientWidth <= 1024 ? 3 : 1,
   pagination: {
     el: ".swiper-pagination-two",
     clickable: true
@@ -180,7 +180,7 @@ const partnersSlider = new Swiper(".partners-slider", {
   slidesPerView: 8,
   spaceBetween: 10,
   freeMode: true,
-  autoplay:true,
-  autoplaySpeed: 1000,
+  autoplay: true,
+  autoplaySpeed: 1000
 });
 
