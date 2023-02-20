@@ -1,0 +1,10 @@
+<svg id="teleg" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="25" cy="25" r="25" fill="url(#paint0_linear_553_1359)"/>
+<path d="M34.838 16.7268C35.0161 15.5762 33.922 14.6679 32.8989 15.1171L12.5212 24.0641C11.7875 24.3862 11.8411 25.4975 12.6021 25.7398L16.8045 27.0781C17.6065 27.3335 18.475 27.2015 19.1754 26.7176L28.65 20.1718C28.9357 19.9744 29.2471 20.3807 29.003 20.6323L22.183 27.6638C21.5214 28.3459 21.6528 29.5017 22.4485 30.0007L30.0842 34.789C30.9406 35.326 32.0424 34.7865 32.2026 33.7516L34.838 16.7268Z" fill="white"/>
+<defs>
+<linearGradient id="paint0_linear_553_1359" x1="25" y1="0" x2="25" y2="50" gradientUnits="userSpaceOnUse">
+<stop stop-color="#37BBFE"/>
+<stop offset="1" stop-color="#007DBB"/>
+</linearGradient>
+</defs>
+</svg>
