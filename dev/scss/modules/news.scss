@@ -213,7 +213,6 @@
             @media (max-width: 1189px) {
               flex-direction: row;
               flex-grow: 1;
-              justify-content: center;
             }
 
             .items-content-block {
@@ -280,24 +279,22 @@
           }
         }
 
-        //@media (max-width: 1189px) {
-        //  .swiper-slide-two {
-        //    width: 100%;
-        //  }
-        //
-        //}
+        @media (max-width: 1189px) {
+          .swiper-slide-two {
+            width: 100%;
+          }
+
+        }
       }
 
-<<<<<<< HEAD
-=======
-      //@media (max-width: 1189px) {
-      //  .news-wrapper {
-      //    flex-direction: column;
-      //    width: 100%;
-      //    gap: 15px;
-      //  }
-      //}
->>>>>>> github/master
+
+      @media (max-width: 1189px) {
+        .news-wrapper {
+          flex-direction: column;
+          width: 100%;
+          gap: 15px;
+        }
+      }
     }
 
   }
