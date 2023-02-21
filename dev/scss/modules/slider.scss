@@ -15,7 +15,7 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     justify-content: start;
-    //background-size: contain;
+
     img {
       display: block;
       width: 100%;
@@ -35,6 +35,9 @@
         font-weight: 600;
         font-size: 64px;
         line-height: 75px;
+        @media (max-width: 768px) {
+          font-size: 45px;
+        }
       }
 
       .text {
@@ -42,6 +45,9 @@
         font-size: 18px;
         line-height: 140%;
         max-width: 659px;
+        @media (max-width: 768px) {
+          font-size: 16px;
+        }
       }
 
       .btn {
@@ -54,6 +60,9 @@
           background: #296188;
           box-shadow: 0 4px 38px rgba(255, 255, 255, 0.25);
           border-radius: 181px;
+          @media (max-width: 768px) {
+            padding: 12px 30px;
+          }
 
           &:hover {
             background: #07466b;

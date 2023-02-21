@@ -8,6 +8,9 @@
           line-height: 49px;
           color: #000000;
           margin-bottom: 32px;
+          @media (max-width: 768px) {
+            font-size: 35px;
+          }
         }
       }
 

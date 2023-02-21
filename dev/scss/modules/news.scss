@@ -1,12 +1,18 @@
 /* News */
 .news {
   margin-bottom: 167px;
+  @media (max-width: 1189px) {
+    margin-bottom: 20px;
+  }
 
   .container {
     .news-wrapper {
       display: flex;
       gap: 35px;
       padding-top: 128px;
+      @media (max-width: 1189px) {
+        padding-top: 20px;
+      }
 
       @media (max-width: 1189px) {
         flex-direction: column;
@@ -32,9 +38,13 @@
             font-size: 42px;
             line-height: 49px;
             color: #000000;
+            @media (max-width: 768px) {
+              font-size: 35px;
+            }
           }
 
           .news-btn {
+            align-self: center;
 
             a {
               color: #282828;
@@ -63,6 +73,9 @@
           gap: 8px;
           margin-bottom: 32px;
           justify-content: space-between;
+          @media (max-width: 926px) {
+            flex-wrap: wrap;
+          }
 
           .post {
             display: flex;
@@ -70,12 +83,15 @@
             gap: 8px;
             max-width: 399px;
             width: calc(100% / 3);
+            @media (max-width: 926px) {
+              width: calc(100% / 1);
+              max-width: 100%;
+            }
 
 
             .post__img {
               img {
                 width: 100%;
-
               }
             }
 
@@ -178,7 +194,7 @@
             line-height: 19px;
             color: #282828;
 
-            a {
+            a{
               color: #282828;
               position: relative;
               &:after {
@@ -214,10 +230,17 @@
               flex-direction: row;
               flex-grow: 1;
             }
+            @media (max-width: 926px) {
+              flex-wrap: wrap;
+              flex-direction: column;
+            }
 
             .items-content-block {
               flex: 0 0 45%;
               align-self: center;
+              @media (max-width: 926px) {
+                display: block;
+              }
 
 
 
@@ -261,6 +284,9 @@
 
               .swiper-place {
                 margin-bottom: 40px;
+                @media (max-width: 1189px) {
+                  margin-bottom: 0;
+                }
 
               }
             }

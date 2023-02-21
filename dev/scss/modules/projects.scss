@@ -1,5 +1,8 @@
 .projects {
   margin-bottom: 172px;
+  @media (max-width: 1189px) {
+    margin-bottom: 20px;
+  }
 
   .container {
     .projects-wrapper {
@@ -16,6 +19,9 @@
           font-size: 42px;
           line-height: 49px;
           color: #000000;
+          @media (max-width: 768px) {
+            font-size: 35px;
+          }
         }
 
         .project-button {
@@ -46,10 +52,16 @@
             background-image: none;
             padding-left: 0;
 
+
             .swiper-content {
               display: flex;
               column-gap: 64px;
 
+              @media (max-width: 926px) {
+                flex-wrap: wrap;
+                flex-direction: column;
+                padding-top: 20px;
+              }
               .project-imag {
                 img {
                   width: 100%;

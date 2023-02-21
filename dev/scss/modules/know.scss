@@ -6,6 +6,9 @@
   background-image: url("../../img/main/know/know.png");
   cursor: pointer;
   margin-bottom: 128px;
+  @media (max-width: 1189px) {
+    margin-bottom: 20px;
+  }
 
   @media (max-width: 860px) {
     background-size:  100% 100%;
@@ -38,6 +41,9 @@
           font-weight: 600;
           font-size: 42px;
           line-height: 49px;
+          @media (max-width: 768px) {
+            font-size: 35px;
+          }
         }
 
         .know-text {
