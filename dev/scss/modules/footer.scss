@@ -81,13 +81,15 @@
           position: relative;
           transition: all 0.3s;
 
-          &:hover {
-            .information-body {
+
+          .information-body {
+            ._active {
               position: relative;
               opacity: 1;
               visibility: visible;
               left: 0;
             }
+
           }
 
 

@@ -26,11 +26,18 @@ window.addEventListener("resize", () => {
 
 
 document.addEventListener("click", (e) => {
-  const btn = document.querySelector('.information-title')
+  const targetElement = e.target;
+  const parentElemen = targetElement.closest('.information');
+  const elemenHover = parentElemen.querySelector('._active');
   const informationBody = document.querySelector('.information-body')
-  if (btn) {
-    informationBody.classList.toggle('active')
+
+  if (elemenHover) {
+    elemenHover.classList.remove('_active');
   }
+  if (targetElement.classList.contains('information-title')) {
+    informationBody.classList.add('_active');
+  }
+
 
   const eTarget = e.target.closest(`[${DATA_ACTION}]`);
   let actionList = [];
