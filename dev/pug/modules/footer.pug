@@ -96,24 +96,24 @@ footer.footer
                         use(href=`./img/footer/icons-block/youtube.svg#youtube`)
                 p.icons-block-text МГЛУ
         .footer-information
-            .information
-                .footer-information-content
-                    .information-title Образование
-                    nav.information-body
-                        ul.information-list.dropdown-menu
+            .information.spollers(data-spollers)(data-one-spoller)
+                .footer-information-content.spollers__item
+                    .information-title.spollers__title(data-spoller) Образование
+                    nav.information-body.spollers__body
+                        ul.information-list
                           each item in education
                               li.information-item
                                   a.information-link(href=`./${item.path}`) #{item.title}
-                .footer-information-content
-                    .information-title Научная жизнь
-                    nav.information-body
+                .footer-information-content.spollers__item
+                    .information-title.spollers__title(data-spoller) Научная жизнь
+                    nav.information-body.spollers__body
                         ul.information-list
                           each item in scientificLife
                               li.information-item
                                   a.information-link(href=`./${item.path}`) #{item.title}
-                .footer-information-content
-                    .information-title Об университете
-                    nav.information-body
+                .footer-information-content.spollers__item
+                    .information-title.spollers__title(data-spoller) Об университете
+                    nav.information-body.spollers__body
                         ul.information-list
                           each item in aboutTheUniversity
                               li.information-item
