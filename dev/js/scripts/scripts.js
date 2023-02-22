@@ -24,7 +24,14 @@ window.addEventListener("resize", () => {
   }, 250);
 });
 
+
 document.addEventListener("click", (e) => {
+  const btn = document.querySelector('.information-title')
+  const informationBody = document.querySelector('.information-body')
+  if (btn) {
+    informationBody.classList.toggle('active')
+  }
+
   const eTarget = e.target.closest(`[${DATA_ACTION}]`);
   let actionList = [];
 

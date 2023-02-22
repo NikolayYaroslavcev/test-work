@@ -100,7 +100,7 @@ footer.footer
                 .footer-information-content
                     .information-title Образование
                     nav.information-body
-                        ul.information-list
+                        ul.information-list.dropdown-menu
                           each item in education
                               li.information-item
                                   a.information-link(href=`./${item.path}`) #{item.title}
@@ -121,13 +121,13 @@ footer.footer
                 .footer-information-content
                     a.information-info(href='#') Одно окно
                     a.information-info(href='#') Политика конфиденциальности
-            .symbology
-                .symbology-wrap
-                    img(src="img/footer/inform/emblemOne.png")
-                    p.symbology-text Президент Республики Беларусь
-                .symbology-wrap
-                    img(src="img/footer/inform/emblemTwo.png")
-                    p.symbology-text Министерство образования
+                .symbology
+                    .symbology-wrap
+                        img(src="img/footer/inform/emblemOne.png")
+                        p.symbology-text Президент Республики Беларусь
+                    .symbology-wrap
+                        img(src="img/footer/inform/emblemTwo.png")
+                        p.symbology-text Министерство образования
         .footer-about
             .about-block
                 .about-name © Минский государственный лингвистический университет
@@ -155,4 +155,160 @@ footer.footer
                             use(href=`./img/footer/about/telegram.svg#telegram`)
 
 
-
+// -
+//     const education = [
+//         {
+//             title: 'Высшее образование (1-я ступень)',
+//             path: 'Higher education'
+//         },
+//         {
+//             title: 'Высшее образование (2-я ступень)',
+//             path: 'Higher '
+//         },
+//         {
+//             title: 'Аспирантура',
+//             path: 'Graduate School'
+//         },
+//         {
+//             title: 'Докторантура',
+//             path: 'Doctoral Studies'
+//         },
+//     ];
+//
+// -
+//     const scientificLife = [
+//         {
+//             title: 'Научные школы',
+//             path: 'Schools of science'
+//         },
+//         {
+//             title: 'Советы по защите диссертаций',
+//             path: 'Dissertation Councils '
+//         },
+//         {
+//             title: 'Научные издания',
+//             path: 'Scientific publications'
+//         },
+//         {
+//             title: 'Информация о конференциях',
+//             path: 'Conference information'
+//         },
+//     ];
+// -
+//     const aboutTheUniversity = [
+//         {
+//             title: 'Управление МГЛУ',
+//             path: 'MSLU Department'
+//         },
+//         {
+//             title: 'Уставные документы',
+//             path: 'Bylaws'
+//         },
+//         {
+//             title: 'Общая информация',
+//             path: 'General Information'
+//         },
+//         {
+//             title: 'Карта сайта',
+//             path: 'Site Map'
+//         },
+//         {
+//             title: 'Геральдика МГЛУ',
+//             path: 'Heraldry of the MSLU'
+//         },
+//         {
+//             title: 'Виртуальный тур по МГЛУ',
+//             path: 'A virtual tour of MSLU'
+//         },
+//         {
+//             title: 'МГЛУ в СМИ',
+//             path: 'MSLU in the media'
+//         },
+//     ];
+//
+//
+//     footer.footer
+//             .container
+//             .footer - icons - block
+//     a.icons - block - link
+//     svg.icon
+//     use(href = `./img/footer/icons-block/vk.svg#vk`)
+//     p.icons - block - text minskmslu
+//     a.icons - block - link
+//     svg.icon
+//     use(href = `./img/footer/icons-block/vk.svg#vk`)
+// //use(href=`./img/footer/icons-block/teleg.svg#teleg`)
+//     p.icons - block - text mslu_by
+//     a.icons - block - link
+//     svg.icon
+//     use(href = `./img/footer/icons-block/vk.svg#vk`)
+// //use(href=`./img/footer/icons-block/insta.svg#insta`)
+//     p.icons - block - text mslu.by
+//     a.icons - block - link
+//     svg.icon
+//     use(href = `./img/footer/icons-block/facebook.svg#facebook`)
+//     p.icons - block - text minskmslu
+//     a.icons - block - link
+//     svg.icon
+//     use(href = `./img/footer/icons-block/youtube.svg#youtube`)
+//     p.icons - block - text МГЛУ
+//         .footer - information
+//         .information
+//         .footer - information - content
+//         .information - title Образование
+//     nav.information - body
+//     ul.information - list.dropdown - menu
+//     each item in education
+//             li.information - item
+//     a.information - link(href = `./${item.path}`) #{item.title}
+//             .footer - information - content
+//             .information - title Научная жизнь
+//     nav.information - body
+//     ul.information - list
+//     each item in scientificLife
+//             li.information - item
+//     a.information - link(href = `./${item.path}`) #{item.title}
+//             .footer - information - content
+//             .information - title Об университете
+//     nav.information - body
+//     ul.information - list
+//     each item in aboutTheUniversity
+//             li.information - item
+//     a.information - link(href = `./${item.path}`) #{item.title}
+//             .footer - information - content
+//     a.information - info(href = '#') Одно окно
+//     a.information - info(href = '#') Политика конфиденциальности
+//         .symbology
+//         .symbology - wrap
+//     img(src = "img/footer/inform/emblemOne.png")
+//     p.symbology - text Президент Республики Беларусь
+//         .symbology - wrap
+//     img(src = "img/footer/inform/emblemTwo.png")
+//     p.symbology - text Министерство образования
+//         .footer - about
+//         .about - block
+//         .about - name © Минский государственный лингвистический университет
+//         .about - text Разработка и поддержка сайта: Медиа Лайн
+//         .about - icons
+//         .about - icons - block
+//     a(href = '#')
+//     svg.icon
+//     use(href = `./img/footer/about/instagram.svg#instagram`)
+//             .about - icons - block
+//     a(href = '#')
+//     svg.icon
+//     use(href = `./img/footer/about/facebook.svg#facebook`)
+//             .about - icons - block
+//     a(href = '#')
+//     svg.icon
+//     use(href = `./img/footer/about/vk.svg#vk`)
+//             .about - icons - block
+//     a(href = '#')
+//     svg.icon
+//     use(href = `./img/footer/about/youtube.svg#youtube`)
+//             .about - icons - block
+//     a(href = '#')
+//     svg.icon
+//     use(href = `./img/footer/about/telegram.svg#telegram`)
+//
+//

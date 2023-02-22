@@ -5,9 +5,14 @@
   .container {
     .footer-icons-block {
       display: flex;
-      justify-content: space-between;
-      gap: 10px;
+      gap: 80px;
       margin-bottom: 25px;
+      @media (max-width: 1029px) {
+        gap: 20px;
+      }
+      @media (max-width: 793px) {
+        justify-content: space-between;
+      }
 
       .icons-block-link {
         display: flex;
@@ -19,7 +24,6 @@
         &:hover {
           transform: scale(1.05);
         }
-
 
         svg {
           width: 50px;
@@ -33,46 +37,77 @@
         font-size: 16px;
         line-height: 19px;
         color: #000000;
-        @media (max-width: 751px) {
+        @media (max-width: 793px) {
           display: none;
         }
       }
     }
 
     .footer-information {
-      display: flex;
-      gap: 15px;
-      border-top: 1px solid #DCDCDC;
-      border-bottom: 1px solid #DCDCDC;
-      padding: 25px 0;
-      justify-content: space-between;
-
-      @media (max-width: 912px) {
-        flex-wrap: wrap;
-        justify-content: space-between;
+      @media (max-width: 1005px) {
+        padding: 10px 0;
+      }
+      @media (max-width: 700px) {
+        display: flex;
+        justify-content: center;
       }
 
       .information {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
         grid-template-rows: 1fr;
-        grid-column-gap: 60px;
-        max-width: 1135px;
+        grid-column-gap: 64px;
+        @media (max-width: 1698px) {
+          grid-column-gap: 20px;
+          flex-wrap: wrap;
+        }
+
+        @media (max-width: 983px) {
+          grid-template-columns: repeat(4, 1fr)
+        }
+        @media (max-width: 777px) {
+          grid-template-columns: repeat(3, 1fr)
+        }
+        @media (max-width: 700px) {
+          display: flex;
+          flex-direction: column;
+          row-gap: 20px;
+        }
 
         .footer-information-content {
           display: flex;
           flex-direction: column;
           gap: 15px;
+          position: relative;
+          transition: all 0.3s;
+
+          &:hover {
+            .information-body {
+              position: relative;
+              opacity: 1;
+              visibility: visible;
+              left: 0;
+            }
+          }
+
 
           .information-title {
             font-weight: 600;
             font-size: 16px;
             line-height: 19px;
             color: #000000;
-            //margin-bottom: 15px;
+
           }
 
           .information-body {
+            @media (max-width: 700px) {
+              position: fixed;
+              left: -100%;
+              opacity: 0;
+              visibility: hidden;
+
+            }
+
             .information-list {
               display: flex;
               flex-direction: column;
@@ -85,6 +120,10 @@
                   line-height: 130%;
                   color: #494949;
                   position: relative;
+                  @media (max-width: 664px) {
+                    font-size: 15px;
+                  }
+
 
                   &:after {
                     display: block;
@@ -132,38 +171,40 @@
 
           }
         }
-      }
 
-      .symbology {
-        display: flex;
-        flex-direction: column;
-        row-gap: 14px;
-        justify-content: center;
-        max-width: 230px;
-        @media (max-width: 912px) {
-          display: contents;
-          flex-direction: row;
-          justify-content: space-between;
-          gap: 15px;
-          max-width: 100%;
-        }
-
-        .symbology-wrap {
+        .symbology {
           display: flex;
-          column-gap: 20px;
-          align-items: center;
+          flex-direction: column;
+          row-gap: 14px;
+          max-width: 230px;
+          justify-content: flex-start;
+          //@media (max-width: 912px) {
+          //  display: contents;
+          //  flex-direction: row;
+          //  justify-content: space-between;
+          //  gap: 15px;
+          //  max-width: 100%;
+          //}
+
+          .symbology-wrap {
+            display: flex;
+            column-gap: 20px;
+            align-items: center;
 
 
-          .symbology-text {
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 16px;
-            color: #9C9C9C;
+            .symbology-text {
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 16px;
+              color: #9C9C9C;
+            }
+
+
           }
-
-
         }
       }
+
+
     }
 
     .footer-about {
@@ -173,6 +214,10 @@
       gap: 10px;
       align-items: end;
       margin-bottom: 45px;
+      @media (max-width: 799px) {
+        padding-top: 20px;
+        margin-bottom: 20px;
+      }
 
       .about-block {
         font-weight: 400;
