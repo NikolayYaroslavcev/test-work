@@ -13,6 +13,7 @@
   @media (max-width: 860px) {
     background-size:  100% 100%;
     margin-bottom: 30px;
+    padding-bottom: 17%;
   }
 
 
@@ -31,10 +32,13 @@
         color: #000000;
         @media (max-width: 1104px) {
           top: 10px;
-
         }
         @media (max-width: 860px) {
           top: 0;
+          row-gap: 8px;
+        }
+        @media (max-width: 426px) {
+          top: -25px;
         }
 
         .know-title {
@@ -42,7 +46,7 @@
           font-size: 42px;
           line-height: 49px;
           @media (max-width: 768px) {
-            font-size: 35px;
+            font-size: 25px;
           }
         }
 
@@ -50,6 +54,10 @@
           font-weight: 500;
           font-size: 18px;
           line-height: 21px;
+          @media (max-width: 768px) {
+            font-size: 17px;
+          }
+
         }
       }
     }

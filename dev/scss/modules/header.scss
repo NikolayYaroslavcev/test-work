@@ -5,6 +5,9 @@
   background: $white;
   font-size: 14px;
   padding: 18px 0 32px 0;
+  @media (max-width: 426px) {
+    padding: 15px 0 20px 0;
+  }
 
 
   .container {
@@ -22,8 +25,9 @@
           display: flex;
           column-gap: 16px;
 
+
           @media (max-width: 1305px) {
-            column-gap: 10px;
+            column-gap: 5px;
             text-align: center;
           }
           @media (max-width: 767px) {
@@ -128,6 +132,7 @@
           column-gap: 16px;
           align-items: flex-end;
 
+
           .logo-imag {
             min-width: 50px;
           }
@@ -138,6 +143,9 @@
             font-weight: 500;
             line-height: 21px;
             color: #000000;
+            @media (max-width: 394px) {
+              font-size: 15px;
+            }
           }
         }
 
