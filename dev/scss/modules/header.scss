@@ -100,6 +100,10 @@
             line-height: 16px;
             color: #000000;
             position: relative;
+            @media (max-width: 394px) {
+              font-size: 13px;
+            }
+
 
             &:after {
               display: block;
@@ -144,7 +148,7 @@
             line-height: 21px;
             color: #000000;
             @media (max-width: 394px) {
-              font-size: 15px;
+              font-size: 13px;
             }
           }
         }
