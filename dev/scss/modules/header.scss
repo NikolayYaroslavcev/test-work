@@ -171,11 +171,10 @@
 
           .menu__list {
             display: flex;
-            column-gap: 10px;
+            gap: 10px;
             @media screen and (max-width: 1440px) {
               .menu__list {
                 flex-wrap: wrap;
-                column-gap: 10px;
               }
             }
             @media (max-width: 883px) {
@@ -195,20 +194,23 @@
                 color: #000000;
                 padding: 10px 20px;
                 transition: all .3s ease-in;
-                @media (max-width: 1305px) {
-                  padding: 5px 10px;
-                }
-                @media (max-width: 767px) {
-                  padding: 0;
-                }
-
                 &:hover {
-                  padding: 5px 10px;
+                  padding: 10px 20px;
                   gap: 10px;
                   background: #14609B;
                   border-radius: 1000px;
                   color: white;
                 }
+                @media (max-width: 1305px) {
+                  padding: 5px 10px;
+                }
+                @media (max-width: 767px) {
+                  padding: 5px 10px;
+                  &:hover {
+                    padding: 5px 10px;
+                  }
+                }
+
               }
             }
           }
