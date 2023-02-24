@@ -40,9 +40,9 @@ header.header
                         p
                             svg.icon
                                 use(href=`./img/header/svg/eye.svg#eye`)
-                    button(data-action="burger-menu-switcher").header-burger
-                      -for (let i = 0; i < 3; i++)
-                            span
+                    //button(data-action="burger-menu-switcher").header-burger
+                    //  -for (let i = 0; i < 3; i++)
+                    //        span
             .navigation
                 .logo
                     .logo-imag
@@ -54,17 +54,17 @@ header.header
                           li.menu__item
                               a.menu__link(href=`./${item.path}`) #{item.title}
                 .system-footer
-                    .input-box
-                        input(type='text', placeholder='Search...')
-                        span.search
-                            i.uil.uil-search.search-icon
-                            a(href='#')
-                                svg.icon
-                                    use(href=`./img/header/svg/search.svg#search`)
-                        i.uil.uil-times.close-icon
+                    .container-search
+                        form.search-form(role='search', method='get', action='')
+                            label
+                                input.search-field(type='search', placeholder='Search …', value='', name='s', title='',autocomplete="off")
+                            //input.search-submit(type='submit', value='')
                     a(href='#')
                         svg.icon
                             use(href=`./img/header/svg/mobile.svg#mobile`)
                     a(href='#')
                         svg.icon
                             use(href=`./img/header/svg/user.svg#user`)
+                    button(data-action="burger-menu-switcher").header-burger
+                      -for (let i = 0; i < 3; i++)
+                               span

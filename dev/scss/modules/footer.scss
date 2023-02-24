@@ -60,6 +60,9 @@
         display: flex;
         justify-content: center;
       }
+      @media (max-width: 426px) {
+        padding: 10px 0 20px 0;
+      }
 
       .information {
         display: grid;
@@ -83,21 +86,13 @@
           row-gap: 20px;
         }
 
+
         .footer-information-content {
           display: flex;
           flex-direction: column;
           gap: 15px;
           position: relative;
           transition: all 0.3s;
-
-          //&:hover {
-          //  .information-body {
-          //    position: relative;
-          //    opacity: 1;
-          //    visibility: visible;
-          //    left: 0;
-          //  }
-          //}
 
 
           .information-title {
@@ -118,8 +113,9 @@
           }
 
           .information-body {
+            display: block;
             @media (min-width: 700px) {
-              display: block;
+              display: none;
               padding: 15px 0 0 0;
               border: none;
             }
@@ -194,13 +190,6 @@
           row-gap: 14px;
           max-width: 230px;
           justify-content: flex-start;
-          //@media (max-width: 912px) {
-          //  display: contents;
-          //  flex-direction: row;
-          //  justify-content: space-between;
-          //  gap: 15px;
-          //  max-width: 100%;
-          //}
 
           .symbology-wrap {
             display: flex;
@@ -219,8 +208,6 @@
           }
         }
       }
-
-
     }
 
     .footer-about {
