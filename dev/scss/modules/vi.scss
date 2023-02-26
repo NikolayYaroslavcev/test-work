@@ -20,6 +20,7 @@ $vi-bd: #002d56;
   &-head {
     padding: 20px 80px 20px 20px;
     border-bottom: 1px solid $vi-b;
+
   }
 
   &-body {
@@ -60,6 +61,7 @@ $vi-bd: #002d56;
         border-right: none;
       }
     }
+
     &:nth-child(-n + 2) {
       @media screen and (max-width: 1024px) {
         border-bottom: 1px solid $vi-b;
@@ -87,6 +89,7 @@ $vi-bd: #002d56;
       }
     }
   }
+
   &-btn {
     display: inline-block;
     border: 1px solid $vi-b;
@@ -121,6 +124,7 @@ $vi-bd: #002d56;
       letter-spacing: 8px;
     }
   }
+
   &-close {
     position: absolute;
     top: 20px;
@@ -134,6 +138,7 @@ $vi-bd: #002d56;
       height: 24px;
     }
   }
+
   &--show {
     display: block;
   }

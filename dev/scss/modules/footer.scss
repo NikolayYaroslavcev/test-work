@@ -2,6 +2,7 @@
   margin-top: auto;
   padding-top: 13%;
 
+
   .container {
     .footer-icons-block {
       display: flex;
@@ -113,9 +114,8 @@
           }
 
           .information-body {
-            display: block;
             @media (min-width: 700px) {
-              display: none;
+              display: block;
               padding: 15px 0 0 0;
               border: none;
             }
@@ -257,6 +257,7 @@
 
 // Спойлер
 .spollers__item {
+  width: 300px;
   // font-size: rem(20);
   &:not(:last-child) {
     margin-bottom: 20px;
@@ -297,6 +298,8 @@
     }
 
     &._spoller-active {
+      display: block;
+
       &::before {
         transform: translateX(-75%) rotate(-40deg);
       }

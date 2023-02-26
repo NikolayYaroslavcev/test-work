@@ -15,7 +15,12 @@
     margin-bottom: 30px;
     padding-bottom: 17%;
   }
+  .swiper-pagination-horizontal {
+    @media (max-width: 769px) {
+      display: none;
+    }
 
+  }
 
 
   .container {

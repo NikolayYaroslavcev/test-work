@@ -4,6 +4,12 @@
   @media (max-width: 1189px) {
     margin-bottom: 20px;
   }
+  .swiper-pagination-horizontal {
+    @media (max-width: 769px) {
+      display: none;
+    }
+
+  }
 
   .container {
     .news-wrapper {

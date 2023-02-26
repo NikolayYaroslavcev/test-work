@@ -12,6 +12,10 @@ body {
   display: flex;
   flex-direction: column;
 
+  &.lock {
+    overflow: hidden;
+  }
+
   &._menu-opened {
     &::before {
       opacity: 1;

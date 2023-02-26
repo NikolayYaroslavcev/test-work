@@ -28,32 +28,28 @@
 
 header.header
     .container
-        .header-block
-            .system
-                .system-header
-                    a(href='#') Система обращений
-                    a(href='#') Репозиторий МГЛУ
-                    p RU
-                        p
-                            svg.icon
-                                use(href=`./img/header/svg/arrow.svg#arrow`)
-                        p
-                            svg.icon
-                                use(href=`./img/header/svg/eye.svg#eye`)
-                    //button(data-action="burger-menu-switcher").header-burger
-                    //  -for (let i = 0; i < 3; i++)
-                    //        span
-            .navigation
-                .logo
-                    .logo-imag
-                        img(src="../../img/header/logo.png")
-                    .logo-text Минский государственный лингвистический университет
+        .system-header
+            .system-logo
+                .logo-imag
+                    img(src="../../img/header/logo.png")
+                .logo-text Минский государственный лингвистический университет
+            .system-navigation
                 nav.menu__body(data-burger-menu)
                     ul.menu__list
                       each item in navBar
                           li.menu__item
                               a.menu__link(href=`./${item.path}`) #{item.title}
-                .system-footer
+            .system-rights(data-burger-menu)
+                .rights-header
+                    a(href='#') Система обращений
+                    a(href='#') Репозиторий МГЛУ
+                    .language
+                        p RU
+                        svg.icon
+                            use(href=`./img/header/svg/arrow.svg#arrow`)
+                    svg.icon.icon-eye
+                        use(href=`./img/header/svg/eye.svg#eye`)
+                .rights-footer
                     .container-search
                         form.search-form(role='search', method='get', action='')
                             label
@@ -65,6 +61,6 @@ header.header
                     a(href='#')
                         svg.icon
                             use(href=`./img/header/svg/user.svg#user`)
-                    button(data-action="burger-menu-switcher").header-burger
-                      -for (let i = 0; i < 3; i++)
-                               span
+            button(data-action="burger-menu-switcher").header-burger
+              -for (let i = 0; i < 3; i++)
+                                                span

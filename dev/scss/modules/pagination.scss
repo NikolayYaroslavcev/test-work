@@ -1,4 +1,10 @@
 .pagination {
+  .swiper-pagination-horizontal {
+    @media (max-width: 769px) {
+      display: none;
+    }
+
+  }
   &-list {
     display: flex;
     justify-content: center;

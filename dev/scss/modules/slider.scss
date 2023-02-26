@@ -1,6 +1,12 @@
 .swiper {
   width: 100%;
   height: 710px;
+  .swiper-pagination-horizontal {
+    @media (max-width: 769px) {
+      display: none;
+    }
+
+  }
 
   &-slide {
     text-align: center;

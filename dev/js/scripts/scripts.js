@@ -25,118 +25,120 @@ window.addEventListener("resize", () => {
 });
 
 
-document.addEventListener("click", (e) => {
+// document.addEventListener("click", (e) => {
+//
+//   const eTarget = e.target.closest(`[${DATA_ACTION}]`);
+//   let actionList = [];
+//
+//   if (eTarget) {
+//     const actiones = eTarget.getAttribute(DATA_ACTION);
+//     actionList = actiones.split(" ");
+//     actionList.map((item) => {
+//       console.log(item, 'item');
+//       if (item === BURGER_MENU_SWITCHER) {
+//         const burgerMenu = document.querySelector("[data-burger-menu]");
+//         eTarget.classList.toggle(ACTIVE_CLASS);
+//         if (burgerMenu) {
+//           scrollToggle();
+//           menuBgOverlayToggle();
+//           burgerMenu.classList.toggle(ACTIVE_CLASS);
+//         }
+//       }
+//
+//       if (item === "accordion-switcher") {
+//         const DROPDOWN_SELECTOR = "[data-accordion-dropdown]";
+//         const acc = eTarget.closest("[data-accordion]");
+//         const dropDown = acc.querySelector(DROPDOWN_SELECTOR);
+//
+//         acc.classList.toggle(ACTIVE_CLASS);
+//         dropDown.slideToggle();
+//
+//         getSiblings(acc).map((item) => {
+//           item.classList.remove(ACTIVE_CLASS);
+//
+//           const itemDropDown = item.querySelector(DROPDOWN_SELECTOR);
+//           if (itemDropDown) {
+//             itemDropDown.slideUp();
+//           }
+//         });
+//       }
+//
+//       if (item === "load-youtube-iframe") {
+//         onYouTubeIframeAPIReady(eTarget, eTarget.getAttribute("data-id"));
+//       }
+//
+//       if (item === "tabs-button") {
+//         const TABS_BTN_SELECTOR = "data-tab-btn";
+//         const TABS_CONTENT_SELECTOR = "data-tab-content";
+//         const dataTabSelector = eTarget.getAttribute(TABS_BTN_SELECTOR);
+//
+//         eTarget.classList.add(ACTIVE_CLASS);
+//
+//         getSiblings(eTarget.closest("li")).forEach((item) => {
+//           item.querySelector(`[${TABS_BTN_SELECTOR}]`).classList.remove(ACTIVE_CLASS);
+//         });
+//
+//         const targetContent = document.querySelectorAll(
+//           `[${TABS_CONTENT_SELECTOR}="${dataTabSelector}"]`
+//         );
+//
+//         if (targetContent.length) {
+//           targetContent.forEach((item) => {
+//             getSiblings(item).forEach((itemInner) => {
+//               itemInner.classList.remove(ACTIVE_CLASS);
+//             });
+//
+//             item.classList.add(ACTIVE_CLASS);
+//           });
+//         }
+//       }
+//     });
+//   }
+// });
 
-  const eTarget = e.target.closest(`[${DATA_ACTION}]`);
-  let actionList = [];
 
-  if (eTarget) {
-    const actiones = eTarget.getAttribute(DATA_ACTION);
-    actionList = actiones.split(" ");
 
-    actionList.map((item) => {
-      if (item === BURGER_MENU_SWITCHER) {
-        const burgerMenu = document.querySelector("[data-burger-menu]");
+// burger
 
-        eTarget.classList.toggle(ACTIVE_CLASS);
 
-        if (burgerMenu) {
-          scrollToggle();
-          menuBgOverlayToggle();
-          burgerMenu.classList.toggle(ACTIVE_CLASS);
-        }
-      }
+const menuBtn = document.querySelector('.header-burger')
+const menu = document.querySelector('.menu__body')
+const menuTwo = document.querySelector('.system-rights')
 
-      if (item === "accordion-switcher") {
-        const DROPDOWN_SELECTOR = "[data-accordion-dropdown]";
-        const acc = eTarget.closest("[data-accordion]");
-        const dropDown = acc.querySelector(DROPDOWN_SELECTOR);
+const body = document.body;
 
-        acc.classList.toggle(ACTIVE_CLASS);
-        dropDown.slideToggle();
+if (menu && menuBtn && menuTwo) {
+  menuBtn.addEventListener('click', e => {
+    menu.classList.toggle('_active')
+    menuBtn.classList.toggle('_active')
+    menuTwo.classList.toggle('_active')
+    body.classList.toggle('lock')
+  })
 
-        getSiblings(acc).map((item) => {
-          item.classList.remove(ACTIVE_CLASS);
+  menu.addEventListener('click', e => {
+    if (e.target.classList.contains('menu__body')) {
+      menu.classList.remove('_active')
+      menuBtn.classList.remove('_active')
+      body.classList.remove('lock')
+    }
+  })
 
-          const itemDropDown = item.querySelector(DROPDOWN_SELECTOR);
+  menu.querySelectorAll('.menu__link').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('_active')
+      menuBtn.classList.remove('_active')
+      body.classList.remove('lock')
+    })
+  })
+}
 
-          if (itemDropDown) {
-            itemDropDown.slideUp();
-          }
-        });
-      }
 
-      if (item === "load-youtube-iframe") {
-        onYouTubeIframeAPIReady(eTarget, eTarget.getAttribute("data-id"));
-      }
-
-      if (item === "tabs-button") {
-        const TABS_BTN_SELECTOR = "data-tab-btn";
-        const TABS_CONTENT_SELECTOR = "data-tab-content";
-        const dataTabSelector = eTarget.getAttribute(TABS_BTN_SELECTOR);
-
-        eTarget.classList.add(ACTIVE_CLASS);
-
-        getSiblings(eTarget.closest("li")).forEach((item) => {
-          item.querySelector(`[${TABS_BTN_SELECTOR}]`).classList.remove(ACTIVE_CLASS);
-        });
-
-        const targetContent = document.querySelectorAll(
-          `[${TABS_CONTENT_SELECTOR}="${dataTabSelector}"]`
-        );
-
-        if (targetContent.length) {
-          targetContent.forEach((item) => {
-            getSiblings(item).forEach((itemInner) => {
-              itemInner.classList.remove(ACTIVE_CLASS);
-            });
-
-            item.classList.add(ACTIVE_CLASS);
-          });
-        }
-      }
-    });
-  }
-});
-
-document.addEventListener("change", (e) => {
-  const eTarget = e.target.closest(`[${DATA_ACTION}]`);
-  let actionList = [];
-
-  if (eTarget) {
-    const actiones = eTarget.getAttribute(DATA_ACTION);
-    actionList = actiones.split(" ");
-
-    actionList.map((item) => {
-      // if (item === SIDEBAR_ACTION_STRING) {
-      // }
-    });
-  }
-});
 
 const setGlobalCssVar = () => {
   // setCssVariable("--viewport-width", `${window.innerWidth}px`);
   // setCssVariable("--viewport-height", `${window.innerHeight}px`);
   // setCssVariable("--header-height", getNodeCssValue(document.querySelector(".header"), "height"));
 };
-
-
-//////////////////////
-
-// search
-// ---- ---- Const ---- ---- //
-let inputBox = document.querySelector(".input-box"),
-  searchIcon = document.querySelector(".search"),
-  closeIcon = document.querySelector(".close-icon");
-
-// ---- ---- Open Input ---- ---- //
-searchIcon.addEventListener("click", () => {
-  inputBox.classList.add("open");
-});
-// ---- ---- Close Input ---- ---- //
-closeIcon.addEventListener("click", () => {
-  inputBox.classList.remove("open");
-});
 
 // slider
 
@@ -286,16 +288,16 @@ const spollers = () => {
       initSpollers(spollersRegular);
     }
     // Получение слойлеров с медиа запросами
-    // let mdQueriesArray = dataMediaQueries(spollersArray, "spollers");
-    // if (mdQueriesArray && mdQueriesArray.length) {
-    //   mdQueriesArray.forEach(mdQueriesItem => {
-    //     // Событие
-    //     mdQueriesItem.matchMedia.addEventListener("change", function () {
-    //       initSpollers(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
-    //     });
-    //    initSpollers(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
-    //   });
-    // }
+    let mdQueriesArray = dataMediaQueries(spollersArray, "spollers");
+    if (mdQueriesArray && mdQueriesArray.length) {
+      mdQueriesArray.forEach(mdQueriesItem => {
+        // Событие
+        mdQueriesItem.matchMedia.addEventListener("change", function () {
+          initSpollers(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
+        });
+       initSpollers(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
+      });
+    }
 
     // Инициализация
     function initSpollers(spollersArray, matchMedia = false) {
