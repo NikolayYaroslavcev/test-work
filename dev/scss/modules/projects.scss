@@ -1,5 +1,5 @@
 .projects {
-  margin-bottom: 172px;
+  margin-bottom: 132px;
   @media (max-width: 1189px) {
     margin-bottom: 20px;
   }
@@ -78,11 +78,13 @@
             .swiper-content {
               display: flex;
               column-gap: 64px;
+              padding-bottom: 40px;
 
               @media (max-width: 926px) {
                 flex-wrap: wrap;
                 flex-direction: column;
                 padding-top: 20px;
+                padding-bottom: 0;
               }
               .project-imag {
                 img {

@@ -238,6 +238,7 @@
             display: flex;
             flex-direction: column;
             gap: 8px;
+            padding-bottom: 40px;
             @media (max-width: 1189px) {
               flex-direction: row;
               flex-grow: 1;
@@ -245,6 +246,7 @@
             @media (max-width: 926px) {
               flex-wrap: wrap;
               flex-direction: column;
+              padding-bottom: 0;
             }
 
             .items-content-block {
@@ -253,9 +255,6 @@
               @media (max-width: 926px) {
                 display: block;
               }
-
-
-
               .swiper-title {
                 font-size: 26px;
                 line-height: 30px;
